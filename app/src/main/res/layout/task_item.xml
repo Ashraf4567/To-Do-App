@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zerobranch.layout.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:draggedItem="@id/drag_item"
+    app:leftItem="@id/delete_view"
+    app:swipeDirection="right"
+    >
+
+
+    <ImageView
+        android:id="@+id/delete_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:src="@drawable/ic_delete"
+        android:background="@drawable/delete_item_bg"
+        />
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="18dp"
+        app:cardCornerRadius="20dp"
+        app:contentPadding="12dp"
+        android:id="@+id/drag_item"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <View
+                android:id="@+id/guideline"
+                android:layout_width="5dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@color/lightPrimary"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Title"
+                android:paddingStart="20dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/lightPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Description"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                android:paddingStart="20dp"
+                android:minLines="2"
+                android:maxLines="2"
+                android:lines="2"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/isDone_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:icon="@drawable/ic_check"
+                app:iconSize="30dp"
+                app:cornerRadius="20dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</com.zerobranch.layout.SwipeLayout>
+

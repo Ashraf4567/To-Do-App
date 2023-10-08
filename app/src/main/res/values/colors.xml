@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="lightGreen">#DFECDB</color>
+    <color name="lightPrimary">#5D9CEC</color>
+    <color name="lightPrimaryDark">#1F4371</color>
+    <color name="lightSecondary">#5D9CEC</color>
+    <color name="lightSecondaryDark">#1F4371</color>
+    <color name="orange">#FF5722</color>
+
+
+
+</resources>
